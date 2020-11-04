@@ -1,8 +1,18 @@
 ## 操作
 
+该shell是通过循环的方式，根据设置的参数，通过kubectl在k8s集群上不停的创建/更新/删除 workload，支持并发。
+
+#### 启动
+
 ```
 cd workload-curd/kubectl-parallel-execution
 ./executer.sh
+```
+
+#### 停止
+
+```
+kill -9 `ps -ef | grep workload | awk '{print $2}'`
 ```
 
 ## 参数说明
